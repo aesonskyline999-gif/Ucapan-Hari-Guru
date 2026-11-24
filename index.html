@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selamat Hari Guru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Skeleton memuat -->
+<div id="loader" role="status" aria-label="Memuat">
+  <div class="sk t1"></div>
+  <div class="sk t2"></div>
+  <div class="baris"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+  <p>Menyiapkan ucapan untuk guru…</p>
+</div>
+
+<div id="bar"></div>
+<button id="musik" aria-label="Putar lagu" title="Untuk-guruku.mp3">🎵</button>
+<audio id="lagu" src="Untuk-guruku.mp3" loop preload="none"></audio>
+
+<main>
+  <section class="hero">
+    <p class="tgl">25 November, Hari Guru Nasional</p>
+    <h1 id="judul">Terima kasih, guruku.</h1>
+    <p class="sub">Lima guru, lima cerita. Gulir ke bawah dan temui mereka satu per satu.</p>
+    <button id="mulai" class="btn">Mulai dan putar lagu</button>
+  </section>
+
+  <section class="story">
+    <p id="cerita">Terima kasih telah menerimaku dan mendampingiku sebagai pengajar. Dari kelas yang ramai, tawa yang pecah, sampai nasihat yang baru kupahami belakangan, semuanya kusimpan baik-baik.</p>
+  </section>
+
+  <section id="guru"></section>
+
+  <section class="penutup">
+    <h2>Selamat Hari Guru.</h2>
+    <p>Pilih satu guru untuk membaca pesan personalnya.</p>
+    <div class="chips" id="chips"></div>
+    <p class="ttd"></p>
+  </section>
+</main>
+
+<!-- Pesan personal -->
+<div id="modal" hidden>
+  <div class="kertas" role="dialog" aria-modal="true" aria-labelledby="m-untuk">
+    <button id="tutup" aria-label="Tutup pesan">✕</button>
+    <h3 id="m-untuk"></h3>
+    <p id="m-isi"></p>
+    <p id="m-dari"></p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
